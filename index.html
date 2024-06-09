@@ -2878,6 +2878,7 @@
           </div>
         </amp-lightbox>
 -->
+<!--
               <amp-state id="battery"
                 src= "https://www.alectrico.cl/api/v1/electrico/circuitos/batteries.json?_=RANDOM"  >
               </amp-state>
@@ -3027,8 +3028,10 @@
                    battery.selectedColor == 'coral'  ? battery.selectedSlideForCoral  : 
                    battery.selectedColor == 'red'    ? battery.selectedSlideForRed    :
                    0 ]"> 13700
+-->
                    <!-- 6958 es el primer id de las maquetas del grupo del color green, debe verse en el backend o hacer un primer rodaje y tomar el número
              desde designer, para ello seleccionar green y mover para delante y atrás hasta que se muestr el id del pimero electrodompéstido, este número también debe estar en el input de carga_id-->
+	     <!--
                 </span>
 		<span> W</span>
               </p>
@@ -3038,11 +3041,11 @@
                 </span>
               </p>
               <p class="price-description"> Tiempo de Carga: 
-               <span [text]="(( battery[battery.selectedColor].p[battery.selectedSlide]).toFixed(2)/( product[product.selectedColor].p[product.selectedColor == 'blue' ? product.selectedSlideForBlue : 0].toFixed(2))).toFixed(2)"  >-- </span>
+               <span [text]="(( battery[battery.selectedColor].p[battery.selectedSlide]).toFixed(2)/( product[product.selectedColor].p[product.selectedColor == 'blue' ? product.selectedSlideForBlue : 0].toFixed(2))).toFixed(2)"  > .. </span>
 	       <span> horas </span>
               </p>
-
-
+	     -->
+	      
 
 
       <div class="my2">
