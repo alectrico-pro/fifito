@@ -3279,7 +3279,7 @@
 	<!-- -->
 	<section [hidden]='currentStep != 2' hidden=''>
 	  <div class='content'>
-	    <form action-xhr='https://www.alectrico.cl/api/amp/presupuestos/create' class='' custom-validation-reporting='show-first-on-submit' id='tipo_trabajo' method='post' on='submit-success:AMP.setState({tipo_trabajoSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/amp/accesos/verify'>
+	    <form action-xhr='https://www.alectrico.cl/api/amp/presupuestos/create' class='' custom-validation-reporting='show-first-on-submit' id='tipo_trabajo' method='post' on='submit-success:AMP.setState({tipo_trabajoSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/api/amp/accesos/verify'>
 	      <input data-amp-replace='CLIENT_ID' name='amp_cliente_id' type='hidden' value='CLIENT_ID(uid)'>
 	      <input name='etapa' type='hidden' value='tipo_trabajo'>
 	      <div class='ampstart-input inline-block relative m0 p0 mb3'>
@@ -3317,7 +3317,7 @@
 	<!-- -->
 	<section [hidden]='currentStep !=3' hidden=''>
 	  <div class='content'>
-	    <form action-xhr='https://www.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({direccionSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/amp/presupuestos/verify'>
+	    <form action-xhr='https://www.alectrico.cl/api/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({direccionSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/api/amp/presupuestos/verify'>
 	      <input data-amp-replace='CLIENT_ID' name='amp_cliente_id' type='hidden' value='CLIENT_ID(uid)'>
 	      <input name='etapa' type='hidden' value='direccion'>
 	      <div class='px2 mt4 md-mt3'>
@@ -3330,10 +3330,10 @@
 		    </div>
 		    <!-- Start Input -->
 		    <div class='ampstart-input inline-block relative m0 p0 mb3'>
-		      <input class='block border-none p0 m0' id='comuna' name='comuna' on='select:AMP.setState({ direccionSelected: true})' placeholder='Municipio' required type='text' value='' on = "select:AMP.setState({ direccionSelected: true})">
-		      <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='comuna'>Comuna</label>
+		      <input class='block border-none p0 m0' id='comuna' name='comuna' on='select:AMP.setState({ direccionSelected: true})' placeholder='Municipio' required type='text' pattern '(Boyeros|Centro Habana)' value='' on = "select:AMP.setState({ direccionSelected: true})">
+		      <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='comuna'>Municipio</label>
 		      <span validation-for='comuna' visible-when-invalid= 'valueMissing'></span>
-                      <span validation-for='comuna' visible-when-invalid= 'patternMismatch'>Por el momento solo atendemos a Providencia y Ñuñoa</span>
+                      <span validation-for='comuna' visible-when-invalid= 'patternMismatch'>Por el momento solo atendemos a Municipios en La Habana</span>
 
 		    </div>
 		  </div>
@@ -3365,7 +3365,7 @@
 	  </div>
 	</section>
 	<!--- -->
-	<form action-xhr='https://www.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' id='data' method='post' on='submit-success:AMP.setState({problemaSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/amp/presupuestos/verify'>
+	<form action-xhr='https://www.alectrico.cl/api/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' id='data' method='post' on='submit-success:AMP.setState({problemaSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/amp/presupuestos/verify'>
 	  <input data-amp-replace='CLIENT_ID' name='amp_cliente_id' type='hidden' value='CLIENT_ID(uid)'>
 	  <input name='etapa' type='hidden' value='visita'>
 	</form>
