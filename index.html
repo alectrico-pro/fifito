@@ -3073,65 +3073,6 @@
 	      
 
 
-      <div class="my2">
-	<!--
-        <button 
-	  hidden
-	  [hidden] = "presupuesto.Iniciado == 1 ? false : true"
-	  on="tap:amp-access.login-sign-in,AMP.setState({presupuesto: {Iniciado: 2}})"
-	  id="boton-login"
-	  class="ampstart-btn ampstart-btn-secondary ml1 caps">Inicie Sesión
-	</button>
-	<span 
-          hidden
-          [hidden] = "presupuesto.Iniciado == 1 ? false : true">... para ver los detalles
-        </span>
-        <span 
-          hidden
-          [hidden] = "presupuesto.Iniciado == 1 ? false : true">   -- o --    
-        </span> 
-	-->
-        <button amp-access="NOT loggedIn" 
-	  on="tap:amp-access.login-sign-up,AMP.setState({registro_usuario: {iniciado: 1}})"
-	  amp-access-hide
-	  tabindex="0"
-	  class="ampstart-btn ml1 caps" >Cree una Cuenta
-	</button>
-	<span amp-access= "NOT subscriber AND NOT loggedIn">... para guardar su trabajo
-	</span>
-      </div>
-      <!---
-      <div class="my2">
-        <div amp-access="NOT subscriber AND NOT loggedIn" amp-access-hide>
-          <button amp-access="NOT loggedIn" 
-            amp-access-hide
-            tabindex="0"
-            class="ampstart-btn ml1 caps" >Cree una Cuenta</button>
-          <span amp-access= "NOT subscriber AND NOT loggedIn">... para guardar su trabajo</span>
-        </div>
-      </div>
-      -->
-
-      <div class="my2">
-	<button amp-access="NOT loggedIn" 
-	  on="tap:amp-access.login-sign-in, carrusel-list.refresh"
-	  class="ampstart-btn ampstart-btn-secondary ml1 caps">Inicie sesión
-	</button>
-	<span amp-access="NOT loggedIn">... para analizar sus circuitos
-	</span>
-	 
-	<!--
-	  <span amp-access="NOT loggedIn AND presupuesto_local"
-			class="inline-block ml1">...para ver el análisis de factibilidad</span>
-	-->
-
-	<button amp-access="loggedIn"
-	  tabindex="0"
-	  on="tap:AMP.setState({ dueno: { invisible: true },  presupuesto: { iniciado: 0 }  }), amp-access.login-sign-out "
-	  class="ampstart-btn ml1 caps"
-	  amp-access-hide>Cierre la Sesión</button>
-      </div>
-
 
       <div class='stepper vertical' 
         >
@@ -3566,6 +3507,67 @@
 	</div>
       </div>
       -->
+
+      <div class="my2">
+        <!--
+        <button 
+          hidden
+          [hidden] = "presupuesto.Iniciado == 1 ? false : true"
+          on="tap:amp-access.login-sign-in,AMP.setState({presupuesto: {Iniciado: 2}})"
+          id="boton-login"
+          class="ampstart-btn ampstart-btn-secondary ml1 caps">Inicie Sesión
+        </button>
+        <span 
+          hidden
+          [hidden] = "presupuesto.Iniciado == 1 ? false : true">... para ver los detalles
+        </span>
+        <span 
+          hidden
+          [hidden] = "presupuesto.Iniciado == 1 ? false : true">   -- o --    
+        </span> 
+        -->
+        <button amp-access="NOT loggedIn" 
+          on="tap:amp-access.login-sign-up,AMP.setState({registro_usuario: {iniciado: 1}})"
+          amp-access-hide
+          tabindex="0"
+          class="ampstart-btn ml1 caps" >Cree una Cuenta
+        </button>
+        <span amp-access= "NOT subscriber AND NOT loggedIn">.. para guardar sus productos
+        </span>
+      </div>
+      <!---
+      <div class="my2">
+        <div amp-access="NOT subscriber AND NOT loggedIn" amp-access-hide>
+          <button amp-access="NOT loggedIn" 
+            amp-access-hide
+            tabindex="0"
+            class="ampstart-btn ml1 caps" >Cree una Cuenta</button>
+          <span amp-access= "NOT subscriber AND NOT loggedIn">... para guardar su trabajo</span>
+        </div>
+      </div>
+      -->
+
+
+      <div class="my2">
+        <button amp-access="NOT loggedIn" 
+          on="tap:amp-access.login-sign-in, carrusel-list.refresh"
+          class="ampstart-btn ampstart-btn-secondary ml1 caps">Inicie sesión
+        </button>
+        <span amp-access="NOT loggedIn">... para recuperar sus productos
+        </span>
+
+        <!--
+          <span amp-access="NOT loggedIn AND presupuesto_local"
+                        class="inline-block ml1">...para ver el análisis de factibilidad</span>
+        -->
+
+        <button amp-access="loggedIn"
+          tabindex="0"
+          on="tap:AMP.setState({ dueno: { invisible: true },  presupuesto: { iniciado: 0 }  }), amp-access.login-sign-out "
+          class="ampstart-btn ml1 caps"
+          amp-access-hide>Cierre la Sesión</button>
+      </div>
+
 
       <amp-analytics type="googleanalytics">
 	<script type="application/json">{
