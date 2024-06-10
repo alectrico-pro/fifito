@@ -3225,7 +3225,7 @@
 	    </button>
 	  </div>
 	</section>
-	<!--- ----- --->
+
 
 	<button [class]="currentStep != 1 ? 'step-title' : 'step-title step-active'" [disabled]='!contactoSelected' class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 1})'>
 	  <i [class]="problemaSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='2'></i> Comentarios
@@ -3341,7 +3341,7 @@
 		  </div>
 		  <div class='col-12 md-col-12 px2'>
 		    <div class='flex flex-wrap mxn2'>
-		      <button [disabled]='direccionSelected' type='submit'>
+		      <button [disabled]='!direccionSelected' type='submit'>
 		      Registrar
 		      </button>
 		    </div>
