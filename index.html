@@ -3341,7 +3341,7 @@
 		  </div>
 		  <div class='col-12 md-col-12 px2'>
 		    <div class='flex flex-wrap mxn2'>
-		      <button [disabled]='!direccionSelected' type='submit'>
+		      <button [hidden]='direccionSelected' [disabled]='direccionSelected' type='submit'>
 		      Registrar
 		      </button>
 		    </div>
