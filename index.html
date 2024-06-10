@@ -1080,6 +1080,20 @@
 
                   <li>
                     <amp-img on="tap:AMP.setState({product: {selectedSlideForGreen: 0, selectedSlide: 0}})"
+                     src="https://bucket-86r0ey.s3.us-east-1.amazonaws.com/olla_arrocera.jpg"
+                      width="60"
+                      height="40"
+                      class=""
+                      [class]="product.selectedSlideForGreen == 0 ? 'selected fadeIn' : '' "
+                      tabindex="0"
+                      role="button">
+                    </amp-img>
+                  </li>
+
+
+
+                  <li>
+                    <amp-img on="tap:AMP.setState({product: {selectedSlideForGreen: 0, selectedSlide: 0}})"
                      src="/img/led_60_40.png"
                       width="60"
                       height="40"
