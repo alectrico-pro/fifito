@@ -940,17 +940,18 @@
 	    </div>
 	  </div>
 	</amp-lightbox>
+-->
 
-<!--
 <amp-state id="images">
   <script type="application/json">
     {
-      "imageUrl_1": "https://storage.googleapis.com/alectrica/img/casita.png",
-      "imageUrl_2": "https://storage.googleapis.com/alectrica/img/sintomas/dolores_de_garganta_01.jpeg",
-      "imageUrl_3": "https://storage.googleapis.com/alectrica/img/sintomas/secreciones_nasales_01.jpg"
+      "imageUrl_1": "https://bucket-86r0ey.s3.us-east-1.amazonaws.com/olla_arrocera.jpg",
+      "imageUrl_2": "https://bucket-86r0ey.s3.us-east-1.amazonaws.com/olla_arrocera.jpg",
+      "imageUrl_3": "https://bucket-86r0ey.s3.us-east-1.amazonaws.com/olla_arrocera.jpg"
     }
   </script>
 </amp-state>
+
 <button on="tap:AMP.setState({imageUrl: images.imageUrl_1})">Image casita</button>
 <button on="tap:AMP.setState({imageUrl: images.imageUrl_2})">Image garganta</button>
 <button on="tap:AMP.setState({imageUrl: images.imageUrl_3})">Image secreciones</button>
@@ -964,8 +965,30 @@
   [src]="imageUrl ? imageUrl : images.imageUrl_1">
 </amp-img>
 
+              <div class="product-gallery">
 
-	<div class="product-gallery">
+                <ul
+                  [hidden]="product.selectedColor != 'yellow'">
+
+
+                  <li>
+                    <amp-img on="tap:AMP.setState({product: {selectedSlideForYellow: 0, selectedSlide: 0}})"
+                     src="https://bucket-86r0ey.s3.us-east-1.amazonaws.com/olla_arrocera.jpg"
+                      width="60"
+                      height="40"
+                      class=""
+                      [class]="product.selectedSlideForGreen == 0 ? 'selected fadeIn' : '' "
+                      tabindex="0"
+                      role="button">
+                    </amp-img>
+                  </li>
+
+
+                </ul>
+              </div>
+
+
+              <div class="product-gallery">
 		<ul hidden
 		  [hidden]="product.selectedColor != 'blue'">
 		  <li>
@@ -1072,20 +1095,6 @@
 
 		<ul
 		  [hidden]="product.selectedColor != 'green'">
-
-
-                  <li>
-                    <amp-img on="tap:AMP.setState({product: {selectedSlideForGreen: 0, selectedSlide: 0}})"
-                     src="https://bucket-86r0ey.s3.us-east-1.amazonaws.com/olla_arrocera.jpg"
-                      width="60"
-                      height="40"
-                      class=""
-                      [class]="product.selectedSlideForGreen == 0 ? 'selected fadeIn' : '' "
-                      tabindex="0"
-                      role="button">
-                    </amp-img>
-                  </li>
-
 
 
                   <li>
