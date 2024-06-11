@@ -1362,8 +1362,8 @@
                   [slide]="product.selectedSlideForYellow"
                   on="slideChange: AMP.setState({product: {selectedSlide: event.index, selectedSlideForYellow: event.index}})"
                   class="fadeIn"
+		  hidden
                   [hidden]="product.selectedColor != 'yellow'">
-
 
                   <amp-img src="https://bucket-86r0ey.s3.us-east-1.amazonaws.com/olla_arrocera.jpg"
                     width="1024"
