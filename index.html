@@ -513,6 +513,10 @@
       height: 40px;
     }
 
+    .yellow {
+      background-color: #ffff00;
+    }
+
 
     .blue {
       background-color: #035096;
@@ -1377,7 +1381,6 @@
 
 	     <div class="product-gallery">
 		<amp-carousel id="blue-apple-carousel"
-		  width="1024"
 		  height="682"
 		  layout="responsive"
 		  type="slides"
@@ -1918,7 +1921,7 @@
                     value="  Agregar  ">
 
 		<div class="items-center flex" >
-		  <label for="color">Grupo:</label>
+			<!--<label for="color">Grupo:</label>-->
 		  <amp-selector name="color"
 		    layout="container"
 		    [selected]="product.selectedColor"
