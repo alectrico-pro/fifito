@@ -987,6 +987,19 @@
                     </amp-img>
                   </li>
 
+                  <li>
+                    <amp-img on="tap:AMP.setState({product: {selectedSlideForYellow: 1, selectedSlide: 1}})"
+                     src="https://bucket-86r0ey.s3.us-east-1.amazonaws.com/parrilla_abierta.jpg"
+                      width="60"
+                      height="40"
+                      class=""
+                      [class]="product.selectedSlideForGreen == 1 ? 'selected fadeIn' : '' "
+                      tabindex="0"
+                      role="button">
+                    </amp-img>
+                  </li>
+
+
 
                 </ul>
               </div>
