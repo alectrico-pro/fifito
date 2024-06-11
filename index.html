@@ -3266,7 +3266,7 @@
 	  </div>
 	</section>
 	 
-	<button class='step-title' [class]="currentStep != 2 ? 'step-title' : 'step-title step-active'" [disabled]='!problemaSelected' class='step-active step-title' disabled='' on='tap:AMP.pushState({ currentStep: 2})'>
+	<button [class]="currentStep != 2 ? 'step-title' : 'step-title step-active'" [disabled]='!problemaSelected' class='step-active step-title' disabled='' on='tap:AMP.pushState({ currentStep: 2})'>
 	  <i [class]="tipo_trabajoSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='3'></i>
 	  Tipo de Trabajo
 	</button>
