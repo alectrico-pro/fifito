@@ -940,7 +940,6 @@
 	    </div>
 	  </div>
 	</amp-lightbox>
--->
 
 <!--
 <amp-state id="images">
@@ -965,7 +964,6 @@
   [src]="imageUrl ? imageUrl : images.imageUrl_1">
 </amp-img>
 
--->
 
 	<div class="product-gallery">
 		<ul hidden
@@ -1865,6 +1863,7 @@
 		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">A_Led
 		</span>
                 <span [text] ="product[product.selectedColor].ids[
+                   product.selectedColor == 'yellow'   ? product.selectedSlideForYellow :
                    product.selectedColor == 'blue'   ? product.selectedSlideForBlue   :
                    product.selectedColor == 'green'  ? product.selectedSlideForGreen  :
                    product.selectedColor == 'golden' ? product.selectedSlideForGolden : 
@@ -1906,13 +1905,17 @@
 			}
 		      })">
 		    <ul class="p0 m1">
-	 
-		<!--
+
+                      <li>
+                        <div option="yellow"
+                          class="square yellow"></div>
+                      </li>
+
+
 		      <li>
 			<div option="blue"
 			  class="square blue"></div>
 		      </li>
-		      -->
 
 		      <li>
 			<div option="green"
