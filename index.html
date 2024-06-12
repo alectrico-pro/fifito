@@ -1914,7 +1914,7 @@
 		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">A_Led
 		</span>
                 <span [text] ="product[product.selectedColor].ids[
-                   product.selectedColor == 'yellow'   ? product.selectedSlideForYellow :
+                   product.selectedColor == 'yellow' ? product.selectedSlideForYellow :
                    product.selectedColor == 'blue'   ? product.selectedSlideForBlue   :
                    product.selectedColor == 'green'  ? product.selectedSlideForGreen  :
                    product.selectedColor == 'golden' ? product.selectedSlideForGolden : 
@@ -2726,7 +2726,7 @@
           {{#items}}
           <div class="item">
              <div class="name">{{nombre}}</div>
-             <div class="price">{{type}}</div>
+	     <div class="price">{{precio}}</div>
           </div>
 
           {{/items}}
