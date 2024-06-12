@@ -1932,7 +1932,7 @@
 	      -->
 	      <form id="order"
 		method="POST"
-		action-xhr="https://www.alectrico.cl/api/v1/electrico/productos/addToCircuito.json"
+		action-xhr="https://www.alectrico.cl/api/v1/electrico/circuitos/addToCircuito.json"
 		target="_top"
 		on="submit-success:AMP.setState({ presupuesto: { Iniciado: (presupuesto.Iniciado + 1)}}),carrusel-list.refresh, cart-list.refresh,ocupacion-list.refresh, factura-list.refresh"
 		class="flex flex-wrap m1">
@@ -2268,7 +2268,7 @@
 	    items = "."
 	    single-item
 	    layout="fixed-height"
-            src="https://www.alectrico.cl/api/v1/electrico/productos/get.json/?amp_cliente_id=CLIENT_ID(uid)&_=RANDOM"
+            src="https://www.alectrico.cl/api/v1/electrico/circuitos/marketplace.json/?amp_cliente_id=CLIENT_ID(uid)&_=RANDOM"
 	    id="carrusel-list">
 	    <div>
             </div>
