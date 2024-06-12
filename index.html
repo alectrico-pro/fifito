@@ -2714,34 +2714,19 @@
 
       <template type="amp-mustache"
         id = "factura-list-template">
-        <!---
-        <hr/>
-        {{time_stamp}}
-        Electrodomésticos de este dispositivo
-        <br/>
-        El presupuesto de este dispositivo es {{presupuesto_local}}
-        <br/>
-        Current_user {{current_user}}
-        <br/>
-        Dueño del presupuesto {{dueño}}
-        <hr/>
-        -->
         <div class="shopping-cart">
           <div class="item header">
             <div class="name">
                <strong>Nombre</strong>
             </div>
             <div class="price">
-               <strong>Pot</strong>
-            </div>
-            <div class="quantity">
-               <strong>Cto</strong>
+               <strong>Precio</strong>
             </div>
           </div>
           {{#items}}
           <div class="item">
              <div class="name">{{nombre}}</div>
-             <div class="price">{{comercio_servicio_id}}</div>
+             <div class="price">{{type}}</div>
           </div>
 
           {{/items}}
