@@ -2374,11 +2374,14 @@
                      value = "CLIENT_ID(uid)"
                     data-amp-replace = "CLIENT_ID">
                   <div class="items-center flex my1 ml1" >
-                    <input type="submit"
-		      [disabled]= "{{loggedIn}}"
-                       class="ampstart-btn caps"
-                      name="  Enviar Solicitud  "
-                      value="  Enviar Solicitud  ">
+	            <section amp-access="NOT loggedIn">
+                      <template amp-access-template type="amp-mustache">
+                        <input type="submit"
+                         class="ampstart-btn caps"
+                         name="  Enviar Solicitud  "
+                         value="  Enviar Solicitud  ">
+		      </template>
+                    </section>
                   </div>
                </fieldset>
 	       <div submitting>
