@@ -2367,6 +2367,10 @@
                 action-xhr= "https://www.alectrico.cl/api/v1/electrico/productos/enviarSolicitud.json"
                 target= "_top"
                 on = "submit-success:carrusel-list.refresh,cart-list.refresh">
+                 <div class="items-center flex" >
+                   <label for="color">Antes de Enviar la Solicitud debe Iniciar una Sesión con los datos del Comprador.</label>
+                 </div>
+
 
                <fieldset>
                   <input name = "amp_cliente_id"
@@ -2378,9 +2382,6 @@
                          class="ampstart-btn caps"
                          name="  Enviar Solicitud  "
                          value="  Enviar Solicitud  ">
-                 <div class="items-center flex" >
-                   <label for="color">Antes de Enviar la Solicitud debe Iniciar una Sesión con los datos del Comprador.</label>
-                 </div>
                </fieldset>
 	       <div submitting>
 	         Envíando los datos ... Gracias por Esperar.
