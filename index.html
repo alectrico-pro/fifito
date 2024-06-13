@@ -2375,8 +2375,8 @@
                     data-amp-replace = "CLIENT_ID">
                   <div class="items-center flex my1 ml1" >
                     <input type="submit"
-		      disabled
-                      class="ampstart-btn caps"
+		      [disabled]= "{{loggedIn}}"
+                       class="ampstart-btn caps"
                       name="  Enviar Solicitud  "
                       value="  Enviar Solicitud  ">
                   </div>
@@ -2758,8 +2758,7 @@
           {{#items}}
           <div class="item">
              <div class="name">{{nombre}}</div>
-	     <div class="price">{{precio}}</div>
-	     <div class="name">{{moneda}}</div>
+	     <div class="price">{{precio}}{{moneda}}</div>
           </div>
 
           {{/items}}
