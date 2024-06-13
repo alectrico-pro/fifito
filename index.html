@@ -2295,6 +2295,11 @@
 	    {{/items}}
 
             {{#items}}
+
+	    {{^items}}
+            Presione ENVIAR SOLICITUD para concretar la compra.
+	    {{/items}}
+
 <!--
 	    <a class="text-decoration-none p1"
 	      href="#">
@@ -2360,7 +2365,7 @@
 	    on = "tap:carrusel-list.refresh,cart-list.refresh,cart-list-dueno.refresh"> Refrescar
 	  </button>
 	  -->
-
+          {{/items}}
           <form method   = "GET"
               action-xhr = "https://www.alectrico.cl/api/v1/electrico/circuitos/{{id}}/solicitar.json"
               target    = "_top"
@@ -2379,7 +2384,6 @@
             </form>
           <hr/>
 
-	  {{/items}}
 	 </template>
         </section>
 
