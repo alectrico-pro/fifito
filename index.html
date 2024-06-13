@@ -2364,7 +2364,6 @@
 	  -->
           {{/items}}
            <form method= "get"
-		 disabled
                 action-xhr= "https://www.alectrico.cl/api/v1/electrico/productos/enviarSolicitud.json"
                 target= "_top"
                 on = "submit-success:carrusel-list.refresh,cart-list.refresh">
@@ -2376,6 +2375,7 @@
                     data-amp-replace = "CLIENT_ID">
                   <div class="items-center flex my1 ml1" >
                     <input type="submit"
+		      hidden
                       class="ampstart-btn caps"
                       name="  Enviar Solicitud  "
                       value="  Enviar Solicitud  ">
