@@ -3254,12 +3254,22 @@
 	      
 
   <section amp-access="loggedIn">
+
        <template amp-access-template type="amp-mustache">
-        <!---
-        {{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
-          {{dueno_remoto}} | current_user {{current_user}}
-          -->
-          {{current_user}}
+	 <div class="shopping-cart">
+          <div class="item header">
+            <div class="name">
+               <strong>Nombre</strong>
+            </div>
+            <div class="price">
+               <strong>Presupuesto</strong>
+            </div>
+          </div>
+          <div class="item">
+             <div class="name">{{current_user}}</div>
+	     <div class="price">{{presupuesto_local}}</div>
+          </div>
+        </div>
         </template>
 
       <div class='stepper vertical' 
@@ -3272,25 +3282,6 @@
 
 	</p>
 
-        <div class="shopping-cart">
-          <div class="item header">
-            <div class="name">
-               <strong>Nombre</strong>
-            </div>
-            <div class="price">
-               <strong>Pot</strong>
-            </div>
-            <div class="quantity">
-               <strong>Cto</strong>
-            </div>
-          </div>
-          <div class="item">
-             <div class="name">nombre</div>
-             <div class="price">potenciaW</div>
-             <div class="price">comercio_servicio_id</div>
-             <div class="quantity">circuito</div>
-          </div>
-        </div>
     
 
 
