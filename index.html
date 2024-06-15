@@ -3316,12 +3316,11 @@
 	  </button>
 	<section [hidden]='currentStep > 0'>
 	  <div class='content'>
-	  <!--  <span amp-access-hide='' 
+	    <span amp-access-hide='' 
 	      amp-access='loggedIn'
 	      role='button' 
 	      tabindex='0'>
-	   -->
-	     <!--
+	   
 	      <button 
 		[hidden]='contactoSelected' 
 		class='ampstart-btn mx1 mt1 caps' 
@@ -3339,7 +3338,6 @@
 		on='select:AMP.setState({contactoSelected: true})'>
 		  <div option='cat'>Acepto</div>
 	      </amp-selector>
-	     -->
 	    </span>
 
 	    <form [hidden]='contactoSelected' action-xhr='https://www.alectrico.cl/amp/accesos/create' amp-access='loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/amp/accesos/verify'>
