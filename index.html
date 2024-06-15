@@ -3413,11 +3413,11 @@
 	  </div>
 	</section>
 
-
+       
+	<!--
 	<button [class]="currentStep != 1 ? 'step-title' : 'step-title step-active'" [disabled]='!contactoSelected' class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 1})'>
 	  <i [class]="problemaSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='2'></i> Comentarios
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep !=1' hidden=''>
 	  <div class='content'>
 	    <form action-xhr='https://www.alectrico.cl/api/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({problemaSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/api/amp/presupuestos/verify'>
@@ -3465,7 +3465,6 @@
 	  <i [class]="tipo_trabajoSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='3'></i>
 	  Tipo de Trabajo
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep != 2' hidden=''>
 	  <div class='content'>
 	    <form action-xhr='https://www.alectrico.cl/api/amp/presupuestos/create' class='' custom-validation-reporting='show-first-on-submit' id='tipo_trabajo' method='post' on='submit-success:AMP.setState({tipo_trabajoSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/api/amp/accesos/verify'>
@@ -3499,11 +3498,9 @@
 	    </form>
 	  </div>
 	</section>
-	<!-- -->
 	<button [class]="currentStep != 3 ? 'step-title' : 'step-title step-active'" [disabled]='!tipo_trabajoSelected' class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 3})'>
 	  <i [class]="direccionSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='4'></i>Dirección
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep !=3' hidden=''>
 	  <div class='content'>
 	    <form action-xhr='https://www.alectrico.cl/api/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({direccionSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/api/amp/presupuestos/verify'>
@@ -3517,7 +3514,6 @@
 		      <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='name'>Dirección</label>
 		      <span validation-for='direccion' visible-when-invalid='valueMissing'></span>
 		    </div>
-		    <!-- Start Input -->
 		    <div class='ampstart-input inline-block relative m0 p0 mb3'>
 		      <input class='block border-none p0 m0' id='comuna' name='comuna' on='select:AMP.setState({ direccionSelected: true})' placeholder='Municipio' required type='text' pattern = "(Arroyo naranjo|Boyeros|Centro habana|Cerro|Cotorro|Diez de octubre|Guanabacoa|La habana del este|La habana vieja|La lisa|Marianao|Playa|Plaza de la revolución|Regla|San miguel del padrón)" value=''>
 		      <label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='comuna'>Municipio</label>
@@ -3553,7 +3549,6 @@
 	    </form>
 	  </div>
 	</section>
-	<!--- -->
 	<form action-xhr='https://www.alectrico.cl/api/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' id='data' method='post' on='submit-success:AMP.setState({problemaSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/amp/presupuestos/verify'>
 	  <input data-amp-replace='CLIENT_ID' name='amp_cliente_id' type='hidden' value='CLIENT_ID(uid)'>
 	  <input name='etapa' type='hidden' value='visita'>
@@ -3561,7 +3556,6 @@
 	<button [class]="currentStep != 4 ? 'step-title' : 'step-title step-active'" [disabled]='!direccionSelected' class='step-title step-active' disabled='' on='tap:AMP.pushState({ currentStep: 4})'>
 	  <i [class]="semanaSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='5'></i>Día de la semana
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep !=4' hidden=''>
 	  <div class='content'>
 	    <p>¿Qué día de la semana le resulta más conveniente para una visita eléctrica?</p>
@@ -3576,11 +3570,9 @@
 	    </amp-selector>
 	  </div>
 	</section>
-	<!-- -->
 	<button [class]="currentStep !=5 ? 'step-title' : 'step-title step-active'" [disabled]='!semanaSelected' class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 5})'>
 	  <i [class]="horaSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='6'></i>Hora del día
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep != 5' hidden=''>
 	  <div class='content'>
 	    <p>¿Qué horario del día le resulta más conveniente para una visita eléctrica?</p>
@@ -3591,12 +3583,10 @@
 	  </div>
 	</section>
 
-	<!-- -->
 	<button value='' class='step-title' [class]="currentStep != 6 ? 'step-title' : 'step-title step-active'" [disabled]='!horaSelected' [hidden]="atencion.selectedServicio != 'certificación'" class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 6})'>
 	  <i [class]="destinoSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='7'></i>
 	  Destino de la Propiedad
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep != 6' hidden=''>
 	  <div class='content'>
 	    <p></p>
@@ -3606,11 +3596,9 @@
 	    </amp-selector>
 	  </div>
 	</section>
-	<!-- -->
 	<button value='' [class]="currentStep != 7 ? 'step-title' : 'step-title step-active'" [disabled]='!destinoSelected' [hidden]="atencion.selectedServicio != 'certificación'" class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 7})'>
 	  <i [class]="reunionSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='8'></i>Lugar de Reunión de Personas
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep != 7' hidden=''>
 	  <div class='content'>
 	    <p>¿En la propiedad se observa la permanencia de 25 personas por más de 15 minutos?</p>
@@ -3620,11 +3608,9 @@
 	    </amp-selector>
 	  </div>
 	</section>
-	<!--- -->
 	<button [class]="currentStep != 8 ?  'step-title' : 'step-title step-active'" [disabled]='!reunionSelected' [hidden]="atencion.selectedServicio != 'certificación'" class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 8})'>
 	  <i [class]="croquisSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='9'></i>Planos Eléctricos
 	</button>
-	<!--- -->
 	<section [hidden]='currentStep != 8' hidden=''>
 	  <div class='content'>
 	    <p>¿Posee los planos de la Instalación Eléctrica?</p>
@@ -3634,11 +3620,9 @@
 	    </amp-selector>
 	  </div>
 	</section>
-	<!-- -->
 	<button [class]="currentStep != 9 ?  'step-title' : 'step-title step-active'" [disabled]='!croquisSelected' [hidden]="atencion.selectedServicio != 'certificación'" class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 9})'>
 	  <i [class]="titularidadSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='10'></i>Titularidad
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep != 9' hidden=''>
 	  <div class='content'>
 	    <p>¿Ud. es el actual dueño o dueña de la propiedad?</p>
@@ -3648,11 +3632,9 @@
 	    </amp-selector>
 	  </div>
 	</section>
-	<!-- -->
 	<button [class]="currentStep != 10 ?  'step-title' : 'step-title step-active'" [disabled]='!titularidadSelected' [hidden]="atencion.selectedServicio != 'certificación'" class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 10})'>
 	  <i [class]="rolSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='11'></i>ROL y RUT
 	</button>
-	<!-- -->
 	<section [hidden]='currentStep != 10' hidden=''>
 	  <div class='content'>
 	    <form action-xhr='https://www.alectrico.cl/amp/presupuestos/create' class='' custom-validation-reporting='show-all-on-submit' method='post' on='submit-success:AMP.setState({rolSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/amp/presupuestos/verify'>
@@ -3667,7 +3649,6 @@
 	      <span validation-for='rol' visible-when-invalid='valueMissing'></span>
 	      <span validation-for='rol' visible-when-invalid='patternMismatch'>Ingrese el ROL con un guión intermedio: xxxxx-xxxxx</span>
 	      </div>
-	      <!-- Start Input -->
 	      <div class='ampstart-input inline-block relative m0 p0 mb3'>
 		<input class='block border-none p0 m0' id='rut' name='rut' pattern='(\d{1}|\d{2})\.\d{3}\.\d{3}-(k|\d{1})' placeholder='RUT' required type='text' value=''>
 		<label aria-hidden='true' class='absolute top-0 right-0 bottom-0 left-0' for='rut'>RUT</label>
@@ -3700,26 +3681,20 @@
 		</template>
 	      </div>
 	    </form>
-            <!---
 	    <button [disabled]='!rolSelected' [hidden]='!rolSelected' disabled hidden on='tap:AMP.pushState({currentStep: currentStep + 1})' type='submit'>
 	    continuar
 	    </button>
-            -->
 	    </div>
 	</section>
-        <!-- -->
         <button [class]="currentStep != 11 ?  'step-title' : 'step-title step-active'" hidden [disabled]='!rolSelected' [hidden]="atencion.selectedServicio != 'certificación'" class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 11})'>
           <i [class]="rolSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='.'></i>Fin del Pedido
         </button>
-        <!-- -->
 
-        <!-- -->
         <button [class]="currentStep != 11 ?  'step-title' : 'step-title step-active'" hidden [disabled]='!horaSelected' [hidden]="atencion.selectedServicio == 'certificación'" class='step-title' disabled='' on='tap:AMP.pushState({ currentStep: 11})'>
           <i [class]="horaSelected ? 'step-complete' : 'step-incomplete'" class='step-incomplete' data-step-nr='.'></i>Fin del Pedido
         </button>
-        <!-- -->
 
-
+       -->
       </div>
       <!--googleon: all-->
 
