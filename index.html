@@ -1954,7 +1954,7 @@
 
 
 	      <p class="price-description"> Seleccionado:
-		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Planta Eléctrica 4650 W
+		<span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Planta Eléctrica 4650W
 		</span>
                 <span [text] ="product[product.selectedColor].ids[
                    product.selectedColor == 'yellow' ? product.selectedSlideForYellow :
@@ -3289,6 +3289,11 @@
           </div>
           <hr/>
           <div class="item">
+             <div class="name">Email</div>
+             <div class="price">{{email}}</div>
+          </div>
+          <hr/>
+          <div class="item">
              <div class="name">Dirección de Entrega</div>
              <div class="price">{{direccion}}</div>
           </div>
@@ -3300,6 +3305,8 @@
         </div>
       </div>
     </div>
+    <hr/>
+    <hr/>
    </template>
 
       <div class='stepper vertical'  >
