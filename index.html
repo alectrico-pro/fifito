@@ -3258,23 +3258,34 @@
        <template amp-access-template type="amp-mustache">
 	 <div class="shopping-cart">
           <div class="item header">
-            <div class="name">
-               <strong>Nombre</strong>
-            </div>
             <div class="price">
-               <strong>Presupuesto</strong>
+               <strong>Datos Para Entrega</strong>
             </div>
           </div>
           <div class="item">
-             <div class="name">{{current_user}}</div>
-	     <div class="price">{{direccion}}</div>
+             <div class="name">Ud. es</div>
+	     <div class="price">{{current_user}}</div>
+          </div>
+          <hr/>
+          <div class="item">
+             <div class="name">El comprador es:</div>
+             <div class="price">{{comprador}}</div>
           </div>
 	  <hr/>
           <div class="item">
-             <div class="name">{{comprador}}</div>
+             <div class="name">Fono del comprador</div>
              <div class="price">{{fono}}</div>
           </div>
-
+          <hr/>
+          <div class="item">
+             <div class="name">Dirección de Entrega</div>
+             <div class="price">{{direccion}}</div>
+          </div>
+          <hr/>
+          <div class="item">
+             <div class="name">Municipio</div>
+             <div class="price">{{municipio}}</div>
+          </div>
         </div>
         </template>
 
