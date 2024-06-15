@@ -3254,12 +3254,23 @@
 	      
 
   <section amp-access="loggedIn">
+       <template amp-access-template type="amp-mustache">
+        <!---
+        {{presupuesto_local}}-local {{dueno_local}} | remoto-{{presupuesto_remoto}}
+          {{dueno_remoto}} | current_user {{current_user}}
+          -->
+          {{current_user}}
+        </template>
 
       <div class='stepper vertical' 
         >
 	<h3 class = "m1">
 	  Datos para el Vale de Mensajería.
 	</h3>
+        <p>
+	  Ingrese los datos necesarios para poder entregar los productos.
+
+	</p>
 
         <div class="shopping-cart">
           <div class="item header">
@@ -3359,7 +3370,7 @@
 
 	      <div submit-success=''>
 		<template type='amp-mustache'>
-		Correcto!
+		Datos Aceptados!
 		</template>
 	      </div>
 
