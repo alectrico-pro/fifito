@@ -3324,7 +3324,6 @@
 		on='tap:amp-access.login-sign-out'>Desbloquear
 
 	      </button>
-	     -->
 	      <hr>
 	      <p>Fifito FreeMarket guardará temporalmente sus datos de contacto.</p>
 	      <hr>
@@ -3336,6 +3335,7 @@
 		on='select:AMP.setState({contactoSelected: true})'>
 		  <div option='cat'>Acepto</div>
 	      </amp-selector>
+	     -->
 	    </span>
 
 	    <form [hidden]='contactoSelected' action-xhr='https://www.alectrico.cl/amp/accesos/create' amp-access='NOT loggedIn' class='' custom-validation-reporting='show-first-on-submit' method='post' on='submit-success:AMP.setState({contactoSelected: true})' target='_top' verify-xhr='https://www.alectrico.cl/amp/accesos/verify'>
