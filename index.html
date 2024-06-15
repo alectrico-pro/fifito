@@ -3254,6 +3254,14 @@
 	      
 
   <section amp-access="loggedIn">
+        <h3 class = "m1">
+          Datos para el Vale de Mensajería.
+        </h3>
+        <p>
+          Ingrese los datos necesarios para poder entregar los productos.
+
+        </p>
+
 
        <template amp-access-template type="amp-mustache">
 	 <div class="shopping-cart">
@@ -3289,19 +3297,7 @@
         </div>
         </template>
 
-      <div class='stepper vertical' 
-        >
-	<h3 class = "m1">
-	  Datos para el Vale de Mensajería.
-	</h3>
-        <p>
-	  Ingrese los datos necesarios para poder entregar los productos.
-
-	</p>
-
-    
-
-
+      <div class='stepper vertical'  >
 	<button [class]="currentStep > 0 ? 'step-title' : 'step-title step-active'" 
 	  class='step-title step-active' 
 	  on='tap:AMP.pushState({ currentStep: 0})'>
